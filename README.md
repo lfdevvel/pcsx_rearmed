@@ -16,6 +16,25 @@ PCSX ReARMed features ARM NEON GPU by Exophase, that in many cases produces
 pixel perfect graphics at very high performance. There is also Una-i's GPU
 plugin from PCSX4ALL project, and traditional P.E.Op.S. one.
 
+Building for Leapster Explorer (lf1000)
+=======================================
+
+Very easy to do, all you need is the toolchain itself and SDL installed for it. If you have those already, then firstly clone the repository, then get submodules.
+
+```
+git clone https://github.com/lfdevvel/pcsx_rearmed --depth=1
+cd pcsx_rearmed
+git submodule init && git submodule update
+```
+
+Then, to configure and build the project, all you need to run is:
+
+```
+CROSS_COMPILE=arm-none-linux-gnueabi- ./configure
+make
+```
+
+The output will be a file named `pcsx`.
 
 PCSX-Reloaded
 =============
